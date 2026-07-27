@@ -17,7 +17,6 @@ The project demonstrates the use of data structures, object-oriented programming
 ## Student Management
 
 The system supports the following operations:
-
 - Add new students
 - View all students in an interactive table
 - Update existing student information
@@ -28,14 +27,12 @@ The system supports the following operations:
 ### Student Information
 
 Each student contains:
-
 - Student ID
 - First Name
 - Last Name
 - Average Grade
 
 Example ID formats:
-
 
 STU01
 A12B
@@ -64,21 +61,18 @@ The application is organized into three main sections:
 ## Top Section
 
 Statistics dashboard containing:
-
 - Total number of students
 - General average grade
 
 ## Left Panel
 
 Student management form containing:
-
 - ID input field
 - First name input field
 - Last name input field
 - Average grade input field
 
 Available actions:
-
 - Add student
 - Update student
 - Delete student
@@ -91,7 +85,6 @@ Available actions:
 Interactive TableView displaying all student records.
 
 Features:
-
 - Select a row to automatically load student information
 - Real-time table updates
 - Organized columns for better visualization
@@ -101,7 +94,6 @@ Features:
 # Data Structure Design
 
 The application uses a hybrid data structure approach for optimized performance.
-
 ```java
 private final LinkedList<Student> studentet = new LinkedList<>();
 private final Map<String, Student> studentMap = new HashMap<>();
@@ -109,14 +101,12 @@ Data Structures Used
 LinkedList
 
 Used for:
-
 Maintaining student order
 Storing all student records
 Sorting operations
 HashMap
 
 Used for:
-
 Fast student lookup by ID
 Improving search performance
 Operation Complexity
@@ -156,78 +146,64 @@ Main Components
 Main.java
 
 Responsible for:
-
 Starting the JavaFX application
 Creating the main interface
 Connecting UI components
 Student.java
 
 Student model class containing:
-
 Attributes
 Getters and setters
 Student information management
 StudentManager.java
 
 Core application logic:
-
 Managing LinkedList and HashMap
 CRUD operations
 Searching
 Sorting
 Statistics calculation
+
 Key Methods
 boolean shtoStudent(Student s)
-
 Student gjejStudentMeMap(String id)
-
 boolean fshiStudent(String id)
-
 boolean perditesoStudent(...)
-
 void sortByNameAZ()
-
 void sortByAverageDesc()
-
 int numriTotalStudenteve()
-
 double mesatarjaPergjithshme()
 Installation and Setup
 Requirements
 
 Before running the project, make sure you have:
-
 Java Development Kit (JDK) 17 or higher
 IntelliJ IDEA or another Java IDE
 JavaFX SDK (if not included)
+
 Running the Application
 1. Clone Repository
 git clone [repository-url]
+
 2. Open Project
-
 Open the project using IntelliJ IDEA:
-
 File → Open → Select Project Directory
-
 Wait until indexing is completed.
 
 3. Configure JavaFX
-
 If JavaFX is not automatically configured, add VM options:
-
 --module-path /path/to/javafx-sdk/lib 
 --add-modules javafx.controls,javafx.fxml
+
 4. Run Application
 
 Navigate to:
-
 Main.java
-
 Run:
-
 Main.main()
-Usage Guide
-Adding a Student
+
+Usage Guide:
+-Adding a Student
 Enter student information:
 ID
 Name
@@ -236,10 +212,9 @@ Average grade
 Click:
 Shto
 The student will appear in the table.
-
 Statistics will update automatically.
 
-Searching for a Student
+-Searching for a Student
 Enter student ID
 Click:
 Kerko Student
@@ -253,27 +228,20 @@ Deleting a Student
 Select a student
 Click:
 Fshi
-
 The student will be removed from the system.
 
-Sorting Students
-
+-Sorting Students
 Available sorting options:
-
 Name Sorting
 Emri (A-Z)
-
 Sorts students alphabetically.
 
-Grade Sorting
+-Grade Sorting
 Mesatarja (nga me e larta)
-
 Sorts students from highest to lowest average.
 
 Error Handling
-
 The application includes:
-
 Input validation
 Duplicate ID prevention
 Decimal separator support (. and ,)
@@ -282,33 +250,21 @@ User feedback messages
 Performance Optimization
 
 The application improves performance through:
-
 HashMap Searching
-
-Student search by ID is performed in:
-
-O(1)
-
-making the lookup efficient even with large datasets.
+Student search by ID is performed in: O(1)making the lookup efficient even with large datasets.
 
 LinkedList Storage
-
 Maintains student order and supports data manipulation.
 
 ObservableList Integration
-
 JavaFX TableView automatically updates when data changes.
 
 Dynamic Statistics
-
 Statistics are recalculated based on current data.
 
 Language
-
 The user interface is currently available in Albanian.
 
 Author
-
-Igor Abuzi
-
-Bachelor Project - Software Engineering
+igorabuzi-dev
+Bachelor Project – Software Engineering
