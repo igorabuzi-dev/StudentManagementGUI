@@ -136,7 +136,9 @@ GUI Framework	JavaFX
 Data Structures	LinkedList, HashMap
 Build Tool	Maven / Gradle
 IDE	IntelliJ IDEA
+
 Project Structure
+
 src/
 └── com/studentmanagement/studentmanagementapp/
     |
