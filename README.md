@@ -259,9 +259,10 @@ JavaFX TableView automatically updates when data changes.
 Dynamic Statistics
 Statistics are recalculated based on current data.
 
-Language
-The user interface is currently available in Albanian.
+## Application Language
+The application interface is currently available in **Albanian**.
 
-Author
-igorabuzi-dev
-Bachelor Project – Software Engineering
+## Author
+**igorabuzi-dev**
+
+**Bachelor Project – Software Engineering**
