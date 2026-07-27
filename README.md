@@ -165,7 +165,7 @@ Searching
 Sorting
 Statistics calculation
 
-### Key Methods
+## Key Methods
 boolean shtoStudent(Student s)
 Student gjejStudentMeMap(String id)
 boolean fshiStudent(String id)
@@ -204,6 +204,7 @@ Run:
 Main.main()
 
 Usage Guide:
+
 -Adding a Student
 Enter student information:
 ID
