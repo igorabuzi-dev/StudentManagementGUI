@@ -34,9 +34,6 @@ Each student contains:
 
 Example ID formats:
 
-STU01
-A12B
-
 
 ---
 
