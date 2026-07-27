@@ -123,9 +123,10 @@ GUI Framework	JavaFX
 Data Structures	LinkedList, HashMap
 Build Tool	Maven / Gradle
 IDE	IntelliJ IDEA
-
-Project Structure
-
+```
+---
+  ## Project Structure
+````
 src/
 └── com/studentmanagement/studentmanagementapp/
     |
@@ -141,8 +142,11 @@ src/
         └── FXML files (optional)
 Main Components
 Main.java
+```
+---
 
-Responsible for:
+## Responsible for:
+```
 Starting the JavaFX application
 Creating the main interface
 Connecting UI components
@@ -160,7 +164,7 @@ CRUD operations
 Searching
 Sorting
 Statistics calculation
-
+```
 Key Methods
 boolean shtoStudent(Student s)
 Student gjejStudentMeMap(String id)
@@ -247,16 +251,13 @@ User feedback messages
 Performance Optimization
 
 The application improves performance through:
-HashMap Searching
+-HashMap Searching
 Student search by ID is performed in: O(1)making the lookup efficient even with large datasets.
-
-LinkedList Storage
+-LinkedList Storage
 Maintains student order and supports data manipulation.
-
-ObservableList Integration
+-ObservableList Integration
 JavaFX TableView automatically updates when data changes.
-
-Dynamic Statistics
+-Dynamic Statistics
 Statistics are recalculated based on current data.
 
 ## Application Language
