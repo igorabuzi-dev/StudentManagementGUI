@@ -166,103 +166,126 @@ Sorting
 Statistics calculation
 
 ## Key Methods
-boolean shtoStudent(Student s)
-Student gjejStudentMeMap(String id)
-boolean fshiStudent(String id)
-boolean perditesoStudent(...)
-void sortByNameAZ()
-void sortByAverageDesc()
-int numriTotalStudenteve()
-double mesatarjaPergjithshme()
-Installation and Setup
-Requirements
+
+| Method | Description |
+|--------|-------------|
+| `boolean shtoStudent(Student s)` | Adds a new student to the system |
+| `Student gjejStudentMeMap(String id)` | Searches for a student by ID using HashMap (O(1)) |
+| `boolean fshiStudent(String id)` | Removes a student from the system |
+| `boolean perditesoStudent(...)` | Updates the information of an existing student |
+| `void sortByNameAZ()` | Sorts students by name (A–Z) using Bubble Sort |
+| `void sortByAverageDesc()` | Sorts students by average grade (highest first) |
+| `int numriTotalStudenteve()` | Returns the total number of students (O(1)) |
+| `double mesatarjaPergjithshme()` | Calculates the overall average of all students (O(n)) |
+
+---
+
+## Installation and Setup
+
+### Requirements
 
 Before running the project, make sure you have:
-Java Development Kit (JDK) 17 or higher
-IntelliJ IDEA or another Java IDE
-JavaFX SDK (if not included)
 
-Running the Application
-1. Clone Repository
-git clone [repository-url]
+- **Java Development Kit (JDK) 17** or higher
+- **IntelliJ IDEA** or another Java IDE
+- **JavaFX SDK** (if not included)
 
+---
+
+## Running the Application
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/igorabuzi-dev/StudentManagementGUI.git
 2. Open Project
 Open the project using IntelliJ IDEA:
-File → Open → Select Project Directory
-Wait until indexing is completed.
+
+File → Open
+
+Select the project directory
+
+Wait until indexing is completed
 
 3. Configure JavaFX
-If JavaFX is not automatically configured, add VM options:
+If JavaFX is not automatically configured, add these VM options:
+
+bash
 --module-path /path/to/javafx-sdk/lib 
 --add-modules javafx.controls,javafx.fxml
-
 4. Run Application
+Navigate to: src/main/java/org/example/Main.java
 
-Navigate to:
-Main.java
-Run:
-Main.main()
+Right-click and select Run Main.main()
 
-Usage Guide:
+Usage Guide
+Adding a Student
+Fill in the student information:
 
--Adding a Student
-Enter student information:
-ID
+ID (e.g. STU01)
+
 Name
+
 Surname
-Average grade
-Click:
-Shto
-The student will appear in the table.
-Statistics will update automatically.
 
--Searching for a Student
-Enter student ID
-Click:
-Kerko Student
-The application searches using HashMap with O(1) complexity.
+Average Grade (e.g. 9.5 or 9,5)
+
+Click the Shto button
+
+The student will appear in the table
+
+Statistics (Total and Average) update automatically
+
+Searching for a Student
+Enter the student ID in the corresponding field
+
+Click the Kerko Student button
+
+The application searches using HashMap with O(1) complexity
+
 Updating Student Information
-Select a student from the table
-Modify the information
-Click:
-Perditeso
+Select a student from the table (click on the row)
+
+Modify the information in the input fields
+
+Click the Perditeso button
+
 Deleting a Student
-Select a student
-Click:
-Fshi
-The student will be removed from the system.
+Select a student from the table
 
--Sorting Students
+Click the Fshi button
+
+The student will be removed from the system
+
+Sorting Students
 Available sorting options:
-Name Sorting
-Emri (A-Z)
-Sorts students alphabetically.
 
--Grade Sorting
-Mesatarja (nga me e larta)
-Sorts students from highest to lowest average.
-
+Option	Description
+Emri (A–Z)	Sorts students alphabetically by name
+Mesatarja (nga me e larta)	Sorts students from highest to lowest average grade
 Error Handling
 The application includes:
+
 Input validation
+
 Duplicate ID prevention
+
 Decimal separator support (. and ,)
+
 Invalid input handling
+
 User feedback messages
+
 Performance Optimization
+The application improves performance through:
 
-## The application improves performance through:
--HashMap Searching
-Student search by ID is performed in: O(1)making the lookup efficient even with large datasets.
--LinkedList Storage
-Maintains student order and supports data manipulation.
--ObservableList Integration
-JavaFX TableView automatically updates when data changes.
--Dynamic Statistics
-Statistics are recalculated based on current data.
+Technique	Description
+HashMap Searching	Student search by ID is performed in O(1) making the lookup efficient even with large datasets
+LinkedList Storage	Maintains student order and supports easy data manipulation
+ObservableList Integration	JavaFX TableView automatically updates when data changes
+Dynamic Statistics	Statistics are recalculated automatically based on current data
 
-## Application Language
-The application interface is currently available in **Albanian**.
+Application Language
+The application interface is currently available in Albanian.
 
 ## Author
 **igorabuzi-dev**
