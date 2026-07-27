@@ -126,7 +126,7 @@ IDE	IntelliJ IDEA
 ```
 ---
   ## Project Structure
-````
+```
 src/
 └── com/studentmanagement/studentmanagementapp/
     |
@@ -146,7 +146,7 @@ Main.java
 ---
 
 ## Responsible for:
-```
+
 Starting the JavaFX application
 Creating the main interface
 Connecting UI components
@@ -164,8 +164,8 @@ CRUD operations
 Searching
 Sorting
 Statistics calculation
-```
-Key Methods
+
+### Key Methods
 boolean shtoStudent(Student s)
 Student gjejStudentMeMap(String id)
 boolean fshiStudent(String id)
@@ -250,7 +250,7 @@ Invalid input handling
 User feedback messages
 Performance Optimization
 
-The application improves performance through:
+## The application improves performance through:
 -HashMap Searching
 Student search by ID is performed in: O(1)making the lookup efficient even with large datasets.
 -LinkedList Storage
