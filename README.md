@@ -1,192 +1,312 @@
-Student Management System
-A JavaFX desktop application for managing student records with efficient data structures and an intuitive user interface.
+# Student Management System
+
+A JavaFX desktop application for managing student records using efficient data structures and an intuitive graphical user interface.
+
+## Overview
+
+Student Management System is a desktop application developed with JavaFX that helps educational institutions manage student information efficiently.
+
+The application provides complete CRUD functionality (Create, Read, Update, Delete), fast searching using HashMap with O(1) complexity, sorting capabilities, and a statistics dashboard with real-time updates.
+
+The project demonstrates the use of data structures, object-oriented programming principles, and JavaFX GUI development.
+
+---
+
+# Features
+
+## Student Management
+
+The system supports the following operations:
+
+- Add new students
+- View all students in an interactive table
+- Update existing student information
+- Delete students from the system
+- Search students by ID
+- Sort students by different criteria
+
+### Student Information
+
+Each student contains:
+
+- Student ID
+- First Name
+- Last Name
+- Average Grade
+
+Example ID formats:
 
 
-Overview
-The Student Management System is a comprehensive desktop application built with JavaFX that allows educational institutions to efficiently manage student records. The application features CRUD operations (Create, Read, Update, Delete), efficient searching using HashMap (O(1) complexity), sorting capabilities, and real-time statistics.
+STU01
+A12B
 
 
-Features
+---
 
-Core Functionality:
-Add Students - Register new students with ID, name, surname, and grade
-View Students - Display all students in an interactive table
-Update Students - Modify existing student information
-Delete Students - Remove students from the system
-Search Students - Fast O(1) search by ID using HashMap
-Sort Students - Sort by name (A-Z) or by average grade (highest first)
+# Statistics Dashboard
 
+The application provides real-time statistics:
 
-Statistics Dashboard
+## Total Students
 
-Total Students Counter - Real-time count of enrolled students
-Overall Average - Calculates and displays the average grade of all students
+Displays the current number of registered students.
 
+## Overall Average
 
-Interactive Table
+Calculates the average grade of all students stored in the system.
 
-Click on any row to automatically populate form fields for editing
-Real-time updates after every operation
-Column headers for clear data organization
+---
 
+# User Interface
 
-Technical Stack
+The application is organized into three main sections:
 
-Component	Technology
-Language	Java 17+
-GUI Framework	JavaFX
-Data Structure	LinkedList + HashMap
-Build Tool	Maven/Gradle (optional)
-IDE	IntelliJ IDEA
+## Top Section
 
+Statistics dashboard containing:
 
-📊 Data Structure Design
+- Total number of students
+- General average grade
 
-The application uses a hybrid data structure approach for optimal performance:
-java
+## Left Panel
+
+Student management form containing:
+
+- ID input field
+- First name input field
+- Last name input field
+- Average grade input field
+
+Available actions:
+
+- Add student
+- Update student
+- Delete student
+- Search student
+- Clear fields
+- Sort students
+
+## Right Panel
+
+Interactive TableView displaying all student records.
+
+Features:
+
+- Select a row to automatically load student information
+- Real-time table updates
+- Organized columns for better visualization
+
+---
+
+# Data Structure Design
+
+The application uses a hybrid data structure approach for optimized performance.
+
+```java
 private final LinkedList<Student> studentet = new LinkedList<>();
 private final Map<String, Student> studentMap = new HashMap<>();
+Data Structures Used
+LinkedList
 
-Operation	Complexity	Data Structure Used
+Used for:
+
+Maintaining student order
+Storing all student records
+Sorting operations
+HashMap
+
+Used for:
+
+Fast student lookup by ID
+Improving search performance
+Operation Complexity
+Operation	Complexity	Data Structure
 Add Student	O(1)	LinkedList + HashMap
 Search by ID	O(1)	HashMap
 Delete Student	O(n)	LinkedList
-Update Student	O(1)	HashMap lookup + LinkedList update
-Sort by Name	O(n²)	LinkedList (Bubble Sort)
-Sort by Grade	O(n²)	LinkedList (Bubble Sort)
+Update Student	O(1) lookup + O(n) update	HashMap + LinkedList
+Sort by Name	O(n²)	LinkedList Bubble Sort
+Sort by Average	O(n²)	LinkedList Bubble Sort
 Get Total Students	O(1)	LinkedList.size()
 Calculate Average	O(n)	LinkedList iteration
- 
-
-User Interface
-
-Main Window Layout
-Left Panel: Student form with input fields and action buttons
-Right Panel: Interactive table showing all student records
-Top Section: Statistics dashboard (total students & average grade)
-
-
-Input Fields
-
-ID: Unique student identifier (e.g., "STU01", "A12B")
-Emri: Student's first name
-Mbiemri: Student's surname
-Mesatarja: Student's average grade (supports both "." and "," decimals)
-
-
-Action Buttons
-
-Shto: Add new student to the system
-Fshi: Delete selected student
-Perditeso: Update selected student's information
-Kerko Student: Search for student by ID (O(1) performance)
-Pastro fushat: Clear all input fields
-Rendit: Sort students based on selected criteria
-
-
-Installation & Setup
-
-
-Prerequisites
-Java Development Kit (JDK) 17 or higher
-IntelliJ IDEA (or any Java IDE)
-JavaFX SDK (if not bundled with JDK)
-
-
-Steps to Run
-Clone the repository:
-git clone [your-repository-url]
-
-Open in IntelliJ IDEA:
-File → Open → Select project directory
-Wait for project indexing to complete
-
-Configure JavaFX (if needed):
-Add VM options in Run Configuration:
---module-path /path/to/javafx-sdk/lib --add-modules javafx.controls,javafx.fxml
-
-
-Run the application:
-
-Navigate to Main.java
-Right-click → Run 'Main.main()'
-
-Usage Guide
-
-Adding a Student
-Fill in the ID, Emri, Mbiemri, and Mesatarja fields
-Click Shto button
-Student appears in the table and statistics update automatically
-
-Searching for a Student
-Enter the student ID in the ID field
-Click Kerko Student
-The student will be highlighted in the table if found
-
-Updating a Student
-Click on any row in the table to load data into fields
-Modify the desired fields
-Click Perditeso to save changes
-
-Deleting a Student
-Select a student from the table
-Click Fshi to remove them
-
-Sorting Students
-Choose sort criteria from dropdown:
-Emri (A–Z): Alphabetical order by name
-Mesatarja (nga me e larta): Highest average first
-
-Click Rendit to apply sorting
-
-
-Code Structure
-
+Technical Stack
+Component	Technology
+Programming Language	Java 17+
+GUI Framework	JavaFX
+Data Structures	LinkedList, HashMap
+Build Tool	Maven / Gradle
+IDE	IntelliJ IDEA
+Project Structure
 src/
 └── com/studentmanagement/studentmanagementapp/
-    ├── Main.java                    # Main JavaFX application
-    │   ├── Student (inner class)    # Student model with getters/setters
-    │   └── StudentManager           # Core logic (LinkedList + HashMap)
-    └── resources/                   # Optional: CSS, FXML files
+    |
+    ├── Main.java
+    |
+    ├── Student.java
+    |
+    ├── StudentManager.java
+    |
+    └── resources/
+        |
+        ├── CSS files
+        └── FXML files (optional)
+Main Components
+Main.java
+
+Responsible for:
+
+Starting the JavaFX application
+Creating the main interface
+Connecting UI components
+Student.java
+
+Student model class containing:
+
+Attributes
+Getters and setters
+Student information management
+StudentManager.java
+
+Core application logic:
+
+Managing LinkedList and HashMap
+CRUD operations
+Searching
+Sorting
+Statistics calculation
 Key Methods
-java
-// StudentManager class
-boolean shtoStudent(Student s)          // Add student
-Student gjejStudent(String id)          // Find student (LinkedList)
-Student gjejStudentMeMap(String id)     // Find student (HashMap - O(1))
-boolean fshiStudent(String id)          // Delete student
-boolean perditesoStudent(...)           // Update student
-void sortByNameAZ()                     // Sort alphabetically
-void sortByAverageDesc()                // Sort by grade descending
-int numriTotalStudenteve()              // Get total count
-double mesatarjaPergjithshme()          // Calculate average
+boolean shtoStudent(Student s)
 
+Student gjejStudentMeMap(String id)
 
-Performance Optimization
-HashMap for instant ID lookups: Searching by ID is O(1) regardless of dataset size
-LinkedList for ordered storage: Maintains insertion order and supports efficient sorting
-ObservableList for TableView: Automatic UI updates when data changes
-Real-time statistics: Total count O(1), Average O(n) calculated on demand
+boolean fshiStudent(String id)
 
+boolean perditesoStudent(...)
+
+void sortByNameAZ()
+
+void sortByAverageDesc()
+
+int numriTotalStudenteve()
+
+double mesatarjaPergjithshme()
+Installation and Setup
+Requirements
+
+Before running the project, make sure you have:
+
+Java Development Kit (JDK) 17 or higher
+IntelliJ IDEA or another Java IDE
+JavaFX SDK (if not included)
+Running the Application
+1. Clone Repository
+git clone [repository-url]
+2. Open Project
+
+Open the project using IntelliJ IDEA:
+
+File → Open → Select Project Directory
+
+Wait until indexing is completed.
+
+3. Configure JavaFX
+
+If JavaFX is not automatically configured, add VM options:
+
+--module-path /path/to/javafx-sdk/lib 
+--add-modules javafx.controls,javafx.fxml
+4. Run Application
+
+Navigate to:
+
+Main.java
+
+Run:
+
+Main.main()
+Usage Guide
+Adding a Student
+Enter student information:
+ID
+Name
+Surname
+Average grade
+Click:
+Shto
+The student will appear in the table.
+
+Statistics will update automatically.
+
+Searching for a Student
+Enter student ID
+Click:
+Kerko Student
+The application searches using HashMap with O(1) complexity.
+Updating Student Information
+Select a student from the table
+Modify the information
+Click:
+Perditeso
+Deleting a Student
+Select a student
+Click:
+Fshi
+
+The student will be removed from the system.
+
+Sorting Students
+
+Available sorting options:
+
+Name Sorting
+Emri (A-Z)
+
+Sorts students alphabetically.
+
+Grade Sorting
+Mesatarja (nga me e larta)
+
+Sorts students from highest to lowest average.
 
 Error Handling
-Validates input fields before operations
-Handles decimal separators (supports both "." and ",")
-Provides user feedback through status messages
-Prevents duplicate IDs
-Graceful error handling for invalid inputs
 
+The application includes:
 
-Contributing
-Fork the repository
-Create a feature branch
-Make your changes
-Submit a pull request
+Input validation
+Duplicate ID prevention
+Decimal separator support (. and ,)
+Invalid input handling
+User feedback messages
+Performance Optimization
 
+The application improves performance through:
 
-Application Language
-The application interface is currently available in Albanian.
+HashMap Searching
+
+Student search by ID is performed in:
+
+O(1)
+
+making the lookup efficient even with large datasets.
+
+LinkedList Storage
+
+Maintains student order and supports data manipulation.
+
+ObservableList Integration
+
+JavaFX TableView automatically updates when data changes.
+
+Dynamic Statistics
+
+Statistics are recalculated based on current data.
+
+Language
+
+The user interface is currently available in Albanian.
 
 Author
-igorabuzi-dev
-Bachelor Project – Software Engineering
+
+Igor Abuzi
+
+Bachelor Project - Software Engineering
