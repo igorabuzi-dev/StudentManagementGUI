@@ -32,7 +32,7 @@ Each student contains:
 - Last Name
 - Average Grade
 
-Example ID formats:
+Example ID formats: K88524M
 
 
 ---
